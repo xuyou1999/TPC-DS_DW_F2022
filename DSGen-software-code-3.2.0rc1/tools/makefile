@@ -38,7 +38,7 @@
 ################
 ## TARGET OS HERE
 ################
-# OS Values: AIX, LINUX, SOLARIS, NCR, HPUX
+# OS Values: AIX, LINUX, SOLARIS, NCR, HPUX, MACOS
 OS	=	LINUX
 ###########
 # No changes should be necessary below this point
@@ -51,6 +51,7 @@ LINUX_CC		= gcc
 NCR_CC		= cc
 SOLARIS_CC	= gcc
 SOL86_CC	= cc
+MACOS_CC	= gcc
 CC		= $($(OS)_CC)
 # CFLAGS
 AIX_CFLAGS		= -q64 -O3 -D_LARGE_FILES
@@ -59,6 +60,7 @@ LINUX_CFLAGS	= -g -Wall
 NCR_CFLAGS		= -g 
 SOLARIS_CFLAGS	= -O3 -Wall
 SOL86_CFLAGS	= -O3 
+MACOS_CFLAGS	= -g -Wall
 BASE_CFLAGS    = -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -DYYDEBUG #-maix64 -DMEM_TEST 
 CFLAGS			= $(BASE_CFLAGS) -D$(OS) $($(OS)_CFLAGS)
 # EXE
@@ -68,6 +70,7 @@ LINUX_EXE	=
 NCR_EXE		= 
 SOLARIS_EXE	= 
 SOL86_EXE	= 
+MACOS_EXE	=
 EXE		= $($(OS)_EXE)
 # LEX
 AIX_LEX		= flex
@@ -76,6 +79,7 @@ LINUX_LEX	= lex
 NCR_LEX		= lex
 SOLARIS_LEX	= lex
 SOL86_LEX	= lex
+MACOS_LEX	= lex
 LEX		= $($(OS)_LEX)
 # LIBS
 AIX_LIBS	= -lm
@@ -84,6 +88,7 @@ LINUX_LIBS	= -lm
 NCR_LIBS	= -lm -lc89
 SOLARIS_LIBS	= -ly -ll -lm
 SOL86_LIBS	= -ly -ll -lm
+MACOS_LIBS	= -lm
 LIBS		= $($(OS)_LIBS)
 # YACC
 AIX_YACC	= yacc
@@ -92,6 +97,7 @@ LINUX_YACC	= yacc
 NCR_YACC	= yacc
 SOLARIS_YACC	= yacc
 SOL86_YACC	= yacc
+MACOS_YACC	= yacc
 YACC		= $($(OS)_YACC)
 # YFLAGS
 AIX_YFLAGS	= -d -v
@@ -100,6 +106,7 @@ LINUX_YFLAGS	= -d -v
 NCR_YFLAGS	= -d -v
 SOLARIS_YFLAGS	= -d -v
 SOL86_YFLAGS	= -d -v
+MACOS_YFLAGS	= -d -v
 YFLAGS		= $($(OS)_YFLAGS)
 ###############
 TREE_ROOT=/tmp/tree
@@ -221,7 +228,7 @@ TESTS =		tests/*.sh tests/*.sql
 ANS = 		answer_sets/*.ans
 QUERY_SRC = $(FQD) $(VARIANTS)
 TREE_DOC =
-JUNK	= tags *.idx columns.h streams.h y.tab.h y.tab.c tokenizer.c  \
+JUNK	= tags *.idx columns.h streams.h tables.h y.tab.h y.tab.c tokenizer.c  \
 	y.output .ctags_updated tpcds.idx.h
 DBGENSRC	= $(SRC) $(HDR) $(OTHER) $(DOC) $(DDL) $(IDXSRC) $(WIN_MAKE) $(QUERY_SRC) $(TESTS) $(ANS)
 GENERATED	= tables.h streams.h columns.h
@@ -250,10 +257,10 @@ clean:
 current_source:
 	cvs update
 depend: $(SRC) $(HDR)
-	touch columns.h streams.h
+	touch columns.h streams.h tables.h
 	-makedepend -f Makefile.suite -Y -- $(CFLAGS) -- $(SRC) 2> /dev/null
 	date > .depend_updated
-	rm -f columns.h streams.h
+	rm -f columns.h streams.h tables.h
 lint:
 	lint $(CFLAGS) -u -x -wO -p $(SRC1)
 	lint $(CFLAGS) -u -x -wO -p $(SRC2)
