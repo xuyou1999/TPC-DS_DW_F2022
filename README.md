@@ -10,3 +10,11 @@
     ```
     make OS=MACOS
     ```
+
+### Generate Data
+Run the following script in /DSGen-software-code-3.2.0rc1/tools
+```
+mkdir ../../data
+./dsdgen -SCALE 1GB -DIR ../../data
+```
+Note: replace "1GB" with the actual data size
