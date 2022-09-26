@@ -15,6 +15,6 @@
 Run the following script in /DSGen-software-code-3.2.0rc1/tools
 ```
 mkdir ../../data
-./dsdgen -SCALE 1GB -DIR ../../data
+./dsdgen -SCALE 1GB -DIR ../../data -TERMINATE n
 ```
 Note: replace "1GB" with the actual data size
