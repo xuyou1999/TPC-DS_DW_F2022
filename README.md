@@ -18,3 +18,11 @@ mkdir ../../data
 ./dsdgen -SCALE 1GB -DIR ../../data -TERMINATE n
 ```
 Note: replace "1GB" with the actual data size
+
+### Generate 99 SQL
+Run the following script in /DSGen-software-code-3.2.0rc1/tools
+```
+./dsqgen -input ../query_templates/templates.lst -directory ../query_templates -dialect sqlserver -scale 1GB -OUTPUT_DIR ../../query_sqlserver
+```
+- Replace "1GB" with the actual data size
+- All queries are in numerical order in file /query_sqlserver/query_0.sql
