@@ -37,3 +37,10 @@ Run the following script in /DSGen-software-code-3.2.0rc1/tools
 ```
 - Replace "1GB" with the actual data size
 - All queries are in numerical order in file /query_sqlserver/query_0.sql
+
+## Queries to be fixed
+- 05
+- 06
+- 07
+- 08
+- 11
