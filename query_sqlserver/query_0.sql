@@ -287,7 +287,7 @@ group by web_site_id)
  group by rollup (channel, id)
  order by channel
          ,id
- ;
+;
 
 
 -- query 7

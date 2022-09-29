@@ -19,6 +19,17 @@ mkdir ../../data
 ```
 Note: replace "1GB" with the actual data size
 
+### Create table in SQL server
+Run the following three sql files located in /DSGen-software-code-3.2.0rc1/tools
+- tpcds.sql
+- tpcds_ri.sql
+- tpcds_source.sql
+
+### Load data
+- Run /src/load_data.py
+- Copy the printed out result into load_data.sql
+- Run load_data.sql
+
 ### Generate 99 SQL
 Run the following script in /DSGen-software-code-3.2.0rc1/tools
 ```
@@ -26,3 +37,45 @@ Run the following script in /DSGen-software-code-3.2.0rc1/tools
 ```
 - Replace "1GB" with the actual data size
 - All queries are in numerical order in file /query_sqlserver/query_0.sql
+
+## Queries to be fixed
+- 05
+- 06
+- 07
+- 08
+- 11
+- 14
+- 17
+- 18
+- 21
+- 24
+- 25
+- 31
+- 32
+- 33
+- 34
+- 39
+- 41
+- 43
+- 44
+- 47
+- 48
+- 53
+- 57
+- 62
+- 63
+- 64
+- 65
+- 67
+- 68
+- 69
+- 75
+- 76
+- 78
+- 80
+- 84
+- 86
+- 87
+- 89
+- 94
+- 98
