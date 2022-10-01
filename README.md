@@ -39,7 +39,8 @@ Run the following script in /DSGen-software-code-3.2.0rc1/tools
 - All queries are in numerical order in file /query_sqlserver/query_0.sql
 
 ## Queries to be fixed
-- 05
+Note: log EVERY STEP in /logs/query_log_YOURNAME.md and modify this doc with "done" after the fixed ones to avoid confusion.
+- 05 done
 - 06
 - 07
 - 08
