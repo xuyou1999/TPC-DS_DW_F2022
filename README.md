@@ -40,6 +40,8 @@ Run the following script in /DSGen-software-code-3.2.0rc1/tools
 
 ## Queries to be fixed
 Note: log EVERY STEP in /logs/query_log_YOURNAME.md and modify this doc with "done" after the fixed ones to avoid confusion.
+
+You Xu:
 - 05 done
 - 06
 - 07
@@ -54,6 +56,8 @@ Note: log EVERY STEP in /logs/query_log_YOURNAME.md and modify this doc with "do
 - 31
 - 32
 - 33
+
+Arina:
 - 34
 - 39
 - 41
@@ -67,6 +71,8 @@ Note: log EVERY STEP in /logs/query_log_YOURNAME.md and modify this doc with "do
 - 63
 - 64
 - 65
+
+Tianheng:
 - 67
 - 68
 - 69
