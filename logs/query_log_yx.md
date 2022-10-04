@@ -25,4 +25,7 @@
 - replace 'substr' with 'substring' in line 3, 27, 30
 
 ### 25
-- - replace '(cast('1999-5-01' as date) + 60 days)' with '(dateadd(day, 60, cast('1999-5-01' as date)))' in line 13
+- replace '(cast('1999-5-01' as date) + 60 days)' with '(dateadd(day, 60, cast('1999-5-01' as date)))' in line 13
+
+### 31
+- replace '(cast('2001-06-09' as date) +  60 days)' with '(dateadd(day, 60, cast('2001-06-09' as date)))' in line 9

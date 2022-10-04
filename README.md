@@ -53,7 +53,7 @@ You Xu:
 - 21
 - 24 done
 - 25 done
-- 31
+- 31 done
 - 32
 - 33
 
