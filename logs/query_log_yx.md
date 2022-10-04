@@ -21,6 +21,9 @@
 ### 18
 - replace 'substr' with 'substring' in line 7
 
+### 21
+- replace 'lochierarchy' with 'grouping(i_category)+grouping(i_class)' in line 26 because SQL server does not allow alias in case statement
+
 ### 24
 - replace 'substr' with 'substring' in line 3, 27, 30
 
