@@ -46,11 +46,11 @@ You Xu:
 - 06 done
 - 07 done
 - 08 done
-- 11
+- 11 done
 - 14 done
 - 17 done
 - 18 done
-- 21
+- 21 done
 - 24 done
 - 25 done
 - 31 done
