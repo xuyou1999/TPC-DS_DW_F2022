@@ -20,3 +20,6 @@
 
 ### 18
 - replace 'substr' with 'substring' in line 7
+
+### 24
+- replace 'substr' with 'substring' in line 3, 27, 30
