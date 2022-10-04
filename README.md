@@ -43,19 +43,19 @@ Note: log EVERY STEP in /logs/query_log_YOURNAME.md and modify this doc with "do
 
 You Xu:
 - 05 done
-- 06
-- 07
-- 08
+- 06 done
+- 07 done
+- 08 done
 - 11
-- 14
-- 17
-- 18
+- 14 done
+- 17 done
+- 18 done
 - 21
-- 24
-- 25
-- 31
-- 32
-- 33
+- 24 done
+- 25 done
+- 31 done
+- 32 done
+- 33 done
 
 Arina:
 - 34

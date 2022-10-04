@@ -1,5 +1,5 @@
 -- query 33
-select top 100 substr(r_reason_desc,1,20)
+select top 100 substring(r_reason_desc,1,20)
        ,avg(ws_quantity)
        ,avg(wr_refunded_cash)
        ,avg(wr_fee)
@@ -75,7 +75,7 @@ select top 100 substr(r_reason_desc,1,20)
     )
    )
 group by r_reason_desc
-order by substr(r_reason_desc,1,20)
+order by substring(r_reason_desc,1,20)
         ,avg(ws_quantity)
         ,avg(wr_refunded_cash)
         ,avg(wr_fee)
