@@ -32,3 +32,6 @@
 
 ### 32
 - replace '(cast('2000-01-05' as date) + 30 days)' with '(dateadd(day, 30, cast('2000-01-05' as date)))' in line 19
+
+### 33
+- replace 'substr' with 'substring' in line 2, 78
