@@ -43,7 +43,7 @@ Note: log EVERY STEP in /logs/query_log_YOURNAME.md and modify this doc with "do
 
 You Xu:
 - 05 done
-- 06
+- 06 done
 - 07
 - 08
 - 11

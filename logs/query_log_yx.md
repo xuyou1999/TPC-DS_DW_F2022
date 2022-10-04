@@ -1,2 +1,6 @@
 ### 5
 - replace 'stddev_samp' with 'stdev' in line 6 and 31
+
+### 6
+- replace '(cast('2002-08-04' as date) +  30 days)' with '(dateadd(day, 30, cast('2002-08-04' as date)))' in line 15, 31, 57
+- replace '||' with '+' in line 71, 78, 85
