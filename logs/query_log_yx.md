@@ -29,3 +29,6 @@
 
 ### 31
 - replace '(cast('2001-06-09' as date) +  60 days)' with '(dateadd(day, 60, cast('2001-06-09' as date)))' in line 9
+
+### 32
+- replace '(cast('2000-01-05' as date) + 30 days)' with '(dateadd(day, 30, cast('2000-01-05' as date)))' in line 19
