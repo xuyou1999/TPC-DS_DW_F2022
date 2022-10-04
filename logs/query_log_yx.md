@@ -10,3 +10,7 @@
 
 ### 8
 - replace 'substr' with 'substring' in line 12
+
+### 14
+- replace '(cast ('2000-05-19' as date) - 30 days)' with '(dateadd(day, -30, cast('2000-05-19' as date)))' in line 19
+- replace '(cast ('2000-05-19' as date) + 30 days)' with '(dateadd(day, 30, cast('2000-05-19' as date)))' in line 20
