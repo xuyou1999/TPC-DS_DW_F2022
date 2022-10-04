@@ -17,3 +17,6 @@
 
 ### 17
 - replace '(cast('1999-4-01' as date) + 60 days)' with '(dateadd(day, 60, cast('1999-4-01' as date)))' in line 13
+
+### 18
+- replace 'substr' with 'substring' in line 7
