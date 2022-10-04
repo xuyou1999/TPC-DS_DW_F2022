@@ -7,3 +7,6 @@
 
 ### 7
 - replace '(cast('1999-02-22' as date) + 90 days)' with '(dateadd(day, 90, cast('1999-02-22' as date)))' in line 11, 23
+
+### 8
+- replace 'substr' with 'substring' in line 12

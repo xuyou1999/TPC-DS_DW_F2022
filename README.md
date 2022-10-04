@@ -45,7 +45,7 @@ You Xu:
 - 05 done
 - 06 done
 - 07 done
-- 08
+- 08 done
 - 11
 - 14
 - 17
