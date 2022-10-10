@@ -47,3 +47,6 @@
 
 ### 39
 - replace '||' with '+' in line 55, 135
+
+### 41
+- replace 'stddev_samp' with 'stdev' in line 7, 8, 11, 12, 14, 15
