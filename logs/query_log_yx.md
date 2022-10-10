@@ -50,3 +50,6 @@
 
 ### 41
 - replace 'stddev_samp' with 'stdev' in line 7, 8, 11, 12, 14, 15
+
+### 43
+- replace '(cast('2002-5-01' as date) + 60 days)' with '(dateadd(day, 60, cast('2002-5-01' as date)))' in line 18
