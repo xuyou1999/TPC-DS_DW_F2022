@@ -53,3 +53,7 @@
 
 ### 43
 - replace '(cast('2002-5-01' as date) + 60 days)' with '(dateadd(day, 60, cast('2002-5-01' as date)))' in line 18
+
+### 44
+- replace '(cast('2001-01-25' as date) + 90 days)' with '(dateadd(day, 90, cast('2001-01-25' as date)))' in line 12
+- replace '(cast('2001-01-25' as date) + 90 days)' with '(dateadd(day, 90, cast('2001-01-25' as date)))' in line 24
