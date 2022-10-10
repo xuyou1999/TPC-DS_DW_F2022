@@ -45,3 +45,5 @@
 ### 34
 - replace 'lochierarchy' with 'grouping(s_state)+grouping(s_county)' in line 34 because SQL server does not allow alias in case statement
 
+### 39
+- replace '||' with '+' in line 55, 135
