@@ -12,7 +12,7 @@
 - replace 'substr' with 'substring' in line 12
 
 ### 11
-- - replace 'lochierarchy' with 'grouping(i_category)+grouping(i_class)' in line 22 because SQL server does not allow alias in case statement
+- replace 'lochierarchy' with 'grouping(i_category)+grouping(i_class)' in line 22 because SQL server does not allow alias in case statement
 
 ### 14
 - replace '(cast ('2000-05-19' as date) - 30 days)' with '(dateadd(day, -30, cast('2000-05-19' as date)))' in line 19
@@ -41,3 +41,7 @@
 
 ### 33
 - replace 'substr' with 'substring' in line 2, 78
+
+### 34
+- replace 'lochierarchy' with 'grouping(s_state)+grouping(s_county)' in line 34 because SQL server does not allow alias in case statement
+
