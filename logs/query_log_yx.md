@@ -57,3 +57,6 @@
 ### 44
 - replace '(cast('2001-01-25' as date) + 90 days)' with '(dateadd(day, 90, cast('2001-01-25' as date)))' in line 12
 - replace '(cast('2001-01-25' as date) + 90 days)' with '(dateadd(day, 90, cast('2001-01-25' as date)))' in line 24
+
+### 47
+- replace 'stddev_samp' with 'stdev' in line 9, 10, 14, 15, 19, 20

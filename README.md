@@ -61,7 +61,7 @@ You Xu:
 - 41 done
 - 43 done
 - 44 done
-- 47
+- 47 done
 
 Arina:
 - 48
