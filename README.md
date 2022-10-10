@@ -56,12 +56,12 @@ You Xu:
 - 31 done
 - 32 done
 - 33 done
-- 34
-- 39
-- 41
-- 43
-- 44
-- 47
+- 34 done
+- 39 done
+- 41 done
+- 43 done
+- 44 done
+- 47 done
 
 Arina:
 - 48

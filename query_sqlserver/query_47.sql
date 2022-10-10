@@ -6,18 +6,18 @@ select top 100
   cd_dep_count,
   count(*) cnt1,
   max(cd_dep_count),
-  stddev_samp(cd_dep_count),
-  stddev_samp(cd_dep_count),
+  stdev(cd_dep_count),
+  stdev(cd_dep_count),
   cd_dep_employed_count,
   count(*) cnt2,
   max(cd_dep_employed_count),
-  stddev_samp(cd_dep_employed_count),
-  stddev_samp(cd_dep_employed_count),
+  stdev(cd_dep_employed_count),
+  stdev(cd_dep_employed_count),
   cd_dep_college_count,
   count(*) cnt3,
   max(cd_dep_college_count),
-  stddev_samp(cd_dep_college_count),
-  stddev_samp(cd_dep_college_count)
+  stdev(cd_dep_college_count),
+  stdev(cd_dep_college_count)
  from
   customer c,customer_address ca,customer_demographics
  where
