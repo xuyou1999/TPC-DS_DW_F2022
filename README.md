@@ -3,6 +3,7 @@
 - Arina Gepalova
 - Tianheng Zhou
 - You Xu
+- Marie Giot
 
 ## Instructions
 ### Make/Build Binaries
@@ -88,3 +89,8 @@ Marie:
 - 89
 - 94
 - 98
+
+## Queries that take longer than 10s
+- 10: 17s
+- 26: >3mins
+- 47: >3mins
