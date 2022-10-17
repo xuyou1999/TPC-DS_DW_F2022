@@ -94,8 +94,11 @@ Marie:
 - 78: 17s
 - 10: >3mins
 - 35: >3mins
+- 23: 1min 25s
+- 14: >3mins
+- 2: 22s
 
 ## Order issue
 - The order number correspondence documents is under /logs
 - Correct ordered queries in /query_sqlserver_org_order
-- 1-47 already renamed and moved
+- 1-47 and 66-99 already renamed and moved
