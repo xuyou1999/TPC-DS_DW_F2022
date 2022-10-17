@@ -1,0 +1,42 @@
+67
+Line 9: Replace (cast('1998-06-06' as date) +  60 days) with (dateadd(day, 60, cast('1998-06-06' as date)))
+
+
+68
+Line 3: Replace substr with substring
+Line10: Replace substr with substring
+Line 21: Add "tt1" as the alias of subquery view, Because the subquery needs a alias for its result.
+Line 50: Add "tt2" as the alias of subquery view
+Line 52: Replace substr with substring
+Line 59: Replace substr with substring
+Line 70: Add "tt3" as the alias of subquery view
+Line 104 Add "tt4" as the alias of subquery view
+
+And the whole query result is null (I checked all the sentences and found that there are indeed no matches in some sentences.
+
+
+69
+Line 34: Add Alias "aa1" for the subquery.
+
+
+75
+Line 16: c_last_review_date_sk -> c_last_review_date   because the attribute name is different as the tutorial using the three files to create tables.
+Line 28: c_last_review_date_sk -> c_last_review_date
+
+
+76
+Line 7: stddev_samp -> stdev
+Line 24: stddev_samp -> stdev
+
+
+78
+Line 11: Replace (cast('2001-08-11' as date) +  30 days) with (dateadd(day, 30, cast('2001-08-11' as date)))
+Line 24: Replace (cast('2001-08-11' as date) +  30 days) with (dateadd(day, 30, cast('2001-08-11' as date)))
+Line 35: Replace (cast('2001-08-11' as date) +  30 days) with (dateadd(day, 30, cast('2001-08-11' as date)))
+Line 46: Replace (cast('2001-08-11' as date) +  30 days) with (dateadd(day, 30, cast('2001-08-11' as date)))
+Line 58: Replace (cast('2001-08-11' as date) +  30 days) with (dateadd(day, 30, cast('2001-08-11' as date)))
+Line 70: Replace (cast('2001-08-11' as date) +  30 days) with (dateadd(day, 30, cast('2001-08-11' as date)))
+
+
+80
+Line 3: Replace two '||' with '+'
