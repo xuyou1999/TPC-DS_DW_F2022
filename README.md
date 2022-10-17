@@ -91,6 +91,11 @@ Marie:
 - 98
 
 ## Queries that take longer than 10s
-- 10: 17s
-- 26: >3mins
-- 47: >3mins
+- 78: 17s
+- 10: >3mins
+- 35: >3mins
+
+## Order issue
+- The order number correspondence documents is under /logs
+- Correct ordered queries in /query_sqlserver_org_order
+- 1-47 already renamed and moved
