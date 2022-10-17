@@ -74,13 +74,13 @@ Arina:
 - 65
 
 Tianheng:
-- 67
-- 68
-- 69
-- 75
-- 76
-- 78
-- 80
+- 67 done
+- 68 done
+- 69 done
+- 75 done
+- 76 done
+- 78 done
+- 80 done
 
 Marie:
 - 84
