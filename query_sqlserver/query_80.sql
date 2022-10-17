@@ -1,6 +1,6 @@
 -- query 80
 select top 100 c_customer_id as customer_id
-       , coalesce(c_last_name,'') || ', ' || coalesce(c_first_name,'') as customername
+       , coalesce(c_last_name,'') + ', ' + coalesce(c_first_name,'') as customername
  from customer
      ,customer_address
      ,customer_demographics

@@ -4,7 +4,7 @@ with year_total as (
        ,c_first_name customer_first_name
        ,c_last_name customer_last_name
        ,d_year as year
-       ,stddev_samp(ss_net_paid) year_total
+       ,stdev(ss_net_paid) year_total
        ,'s' sale_type
  from customer
      ,store_sales
@@ -21,7 +21,7 @@ with year_total as (
        ,c_first_name customer_first_name
        ,c_last_name customer_last_name
        ,d_year as year
-       ,stddev_samp(ws_net_paid) year_total
+       ,stdev(ws_net_paid) year_total
        ,'w' sale_type
  from customer
      ,web_sales
