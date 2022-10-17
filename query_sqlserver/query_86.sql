@@ -18,8 +18,8 @@ select top 100
  and i_item_sk          = cs_item_sk
  and cs_warehouse_sk    = w_warehouse_sk 
  and cs_sold_date_sk    = d_date_sk
- and d_date between (cast ('2002-05-18' as date) - 30 days)
-                and (cast ('2002-05-18' as date) + 30 days) 
+ and d_date between (dateadd (day, -30, cast ('2002-05-18' as date)))
+                and (dateadd (day, 30, cast ('2002-05-18' as date)))
  group by
     w_state,i_item_id
  order by w_state,i_item_id
