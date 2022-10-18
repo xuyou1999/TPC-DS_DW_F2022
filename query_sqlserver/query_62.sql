@@ -1,12 +1,12 @@
 -- query 62
-select top 100 distinct(i_product_name)
+select distinct top 100 (i_product_name)
  from item i1
- where i_manufact_id between 668 and 668+40 
+ where i_manufact_id between 668 and 668+40
    and (select count(*) as item_cnt
         from item
         where (i_manufact = i1.i_manufact and
-        ((i_category = 'Women' and 
-        (i_color = 'cream' or i_color = 'ghost') and 
+        ((i_category = 'Women' and
+        (i_color = 'cream' or i_color = 'ghost') and
         (i_units = 'Ton' or i_units = 'Gross') and
         (i_size = 'economy' or i_size = 'small')
         ) or
@@ -26,8 +26,8 @@ select top 100 distinct(i_product_name)
         (i_size = 'economy' or i_size = 'small')
         ))) or
        (i_manufact = i1.i_manufact and
-        ((i_category = 'Women' and 
-        (i_color = 'floral' or i_color = 'royal') and 
+        ((i_category = 'Women' and
+        (i_color = 'floral' or i_color = 'royal') and
         (i_units = 'Unknown' or i_units = 'Tbl') and
         (i_size = 'economy' or i_size = 'small')
         ) or
