@@ -66,12 +66,12 @@ You Xu:
 
 Arina:
 - 48
-- 53
-- 57
-- 62
-- 63
-- 64
-- 65
+- 53 done
+- 57 done
+- 62 done
+- 63 done
+- 64 done
+- 65 done
 
 Tianheng:
 - 67 done
