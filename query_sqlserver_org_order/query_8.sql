@@ -1,4 +1,4 @@
--- query 63
+-- query 8
 select top 100 s_store_name
       ,sum(ss_net_profit)
  from store_sales
