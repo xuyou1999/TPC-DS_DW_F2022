@@ -83,12 +83,12 @@ Tianheng:
 - 80 done
 
 Marie:
-- 84
-- 86
-- 87
-- 89
-- 94
-- 98
+- 84 done
+- 86 done
+- 87 done
+- 89 done
+- 94 done
+- 98 done
 
 ## Queries that take longer than 10s
 - 78: 17s
