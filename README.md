@@ -90,13 +90,20 @@ Marie:
 - 94 done
 - 98 done
 
-## Queries that take longer than 10s
+## Queries that take long
+### 1GB: >10s
 - 78: 17s
 - 10: 500s
 - 35: 1060s
 - 23: 85s
 - 14: >4hrs
 - 2: 23s
+
+### 2GB: > 20s (not include above)
+- 69: 48s
+
+## Query Optimization
+- 14: see log yx
 
 ## Order issue
 - The order number correspondence documents is under /logs
@@ -106,3 +113,6 @@ Marie:
 ## Runtime limitations
 - The test run is on ARM64 MacOS machine. Thus, it is based on Microsoft's Azura SQL Edge docker container developer version, which limit the CPU performance to maximun 4 cores.
 - When running query 23, only 1 CPU core is allocated . Reason unknow. This only happens under the environment condition specified above. We believe this issue if irrelevant to our project but due to the lack of ARM64 support from Microsoft.
+
+## Results
+In /result folder
