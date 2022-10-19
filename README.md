@@ -102,3 +102,7 @@ Marie:
 - The order number correspondence documents is under /logs
 - Correct ordered queries in /query_sqlserver_org_order
 - All already renamed and moved except 48
+
+## Runtime limitations
+- The test run is on ARM64 MacOS machine. Thus, it is based on Microsoft's Azura SQL Edge docker container developer version, which limit the CPU performance to maximun 4 cores.
+- When running query 23, only 1 CPU core is allocated . Reason unknow. This only happens under the environment condition specified above. We believe this issue if irrelevant to our project but due to the lack of ARM64 support from Microsoft.

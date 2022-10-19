@@ -1,3 +1,4 @@
+## Fix queries
 ### 5
 - replace 'stddev_samp' with 'stdev' in line 6 and 31
 
@@ -60,3 +61,80 @@
 
 ### 47
 - replace 'stddev_samp' with 'stdev' in line 9, 10, 14, 15, 19, 20
+
+## Query optimization
+### 14
+For subquery 
+```
+select iss.i_brand_id brand_id
+     ,iss.i_class_id class_id
+     ,iss.i_category_id category_id
+ from store_sales
+     ,item iss
+     ,date_dim d1
+ where ss_item_sk = iss.i_item_sk
+   and ss_sold_date_sk = d1.d_date_sk
+   and d1.d_year between 1999 AND 1999 + 2
+ intersect 
+ select ics.i_brand_id
+     ,ics.i_class_id
+     ,ics.i_category_id
+ from catalog_sales
+     ,item ics
+     ,date_dim d2
+ where cs_item_sk = ics.i_item_sk
+   and cs_sold_date_sk = d2.d_date_sk
+   and d2.d_year between 1999 AND 1999 + 2
+ intersect
+ select iws.i_brand_id
+     ,iws.i_class_id
+     ,iws.i_category_id
+ from web_sales
+     ,item iws
+     ,date_dim d3
+ where ws_item_sk = iws.i_item_sk
+   and ws_sold_date_sk = d3.d_date_sk
+   and d3.d_year between 1999 AND 1999 + 2) aa1
+ where i_brand_id = brand_id
+      and i_class_id = class_id
+      and i_category_id = category_id
+```
+By analyzing the query, it is not difficult to see that the duplicate result from this subquery is not necessary since the result is eventually used in the "where in" clause.
+
+Therefore, I applied "distinct" before "interset."
+
+In addition, I applied selection in the original table first, which reduced redundant data for finding intersect, and rewrote the "interset" between three tables into "where" clauses to force it to change from $n^2$ sequential scan to inner join, which is much more efficient.
+
+The new query is now:
+```
+with q1 as (
+    select distinct ss_item_sk
+    from store_sales, date_dim d1
+    where ss_sold_date_sk = d1.d_date_sk
+        and d1.d_year between 1999 AND 1999 + 2
+),
+q2 as(
+    select distinct cs_item_sk
+    from catalog_sales, date_dim d2
+    where cs_sold_date_sk = d2.d_date_sk
+        and d2.d_year between 1999 AND 1999 + 2
+)
+,
+q3 as(
+    select distinct ws_item_sk
+    from web_sales, date_dim d3
+    where ws_sold_date_sk = d3.d_date_sk
+        and d3.d_year between 1999 AND 1999 + 2
+)
+select distinct iss.i_brand_id brand_id
+     ,iss.i_class_id class_id
+     ,iss.i_category_id category_id
+ from q1
+     ,q2
+     ,q3
+     ,item iss
+ where q1.ss_item_sk = iss.i_item_sk
+        and q2.cs_item_sk = iss.i_item_sk
+        and q3.ws_item_sk = iss.i_item_sk;
+```
+After optimization, the running time is reduced from over 4 hours to only 6 seconds.
