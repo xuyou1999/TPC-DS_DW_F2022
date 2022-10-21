@@ -3,7 +3,7 @@ select top 100 i_product_name
              ,i_brand
              ,i_class
              ,i_category
-             ,avg(inv_quantity_on_hand) qoh
+             ,avg(CAST(inv_quantity_on_hand AS bigint)) qoh
        from inventory
            ,date_dim
            ,item
