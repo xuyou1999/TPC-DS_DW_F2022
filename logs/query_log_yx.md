@@ -28,6 +28,9 @@
 ### 21
 - replace 'lochierarchy' with 'grouping(i_category)+grouping(i_class)' in line 26 because SQL server does not allow alias in case statement
 
+### New 22
+- replace "inv_quantity_on_hand" with "CAST(inv_quantity_on_hand AS bigint)" because the number is too large to be hold as an int.
+
 ### 24
 - replace 'substr' with 'substring' in line 3, 27, 30
 
