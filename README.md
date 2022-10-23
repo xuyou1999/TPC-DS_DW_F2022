@@ -38,8 +38,23 @@ Run the following script in /DSGen-software-code-3.2.0rc1/tools
 ```
 - Replace "1GB" with the actual data size
 - All queries are in numerical order in file /query_sqlserver/query_0.sql
+- File /src/split_queries.ipynb may help spliting the queries
+- Alternatively, all 99 queries are separately stored in /query_sqlserver_org_order already
 
-## Queries to be fixed
+### Run Queries
+- /src/auto_run_sql.ipynb will help connecting, running 99 queries and documenting the runtime automatically. 
+- Add database credentials in file "/src/credential.json" in the following format:
+```
+{
+    "server": "yourServer",
+    "database": "yourDatabase",
+    "username": "yourUsername",
+    "password": "yourPassword"
+}
+```
+
+## Work Plan
+### Queries to be fixed
 Note: log EVERY STEP in /logs/query_log_YOURNAME.md and modify this doc with "done" after the fixed ones to avoid confusion.
 
 You Xu:
@@ -90,20 +105,12 @@ Marie:
 - 94 done
 - 98 done
 
-## Queries that take long
-### 1GB: >10s
-- 78: 17s
+### Query Optimization
+#### 1GB
 - 10: 500s
 - 35: 1060s
 - 23: 85s
-- 14: >4hrs
-- 2: 23s
-
-### 2GB: > 20s (not include above)
-- 69: 48s
-
-## Query Optimization
-- 14: see log yx
+- 14: >4hrs - see /logs/query_log_yx.md
 
 ## Order issue
 - The order number correspondence documents is under /logs
@@ -115,4 +122,4 @@ Marie:
 - When running query 23, only 1 CPU core is allocated . Reason unknow. This only happens under the environment condition specified above. We believe this issue if irrelevant to our project but due to the lack of ARM64 support from Microsoft.
 
 ## Results
-In /result folder
+In /result folder for scale factors 1, 2, 5, 10
