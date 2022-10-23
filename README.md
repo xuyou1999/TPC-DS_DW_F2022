@@ -105,20 +105,12 @@ Marie:
 - 94 done
 - 98 done
 
-### Queries that take long
-### 1GB: >10s
-- 78: 17s
+### Query Optimization
+#### 1GB
 - 10: 500s
 - 35: 1060s
 - 23: 85s
-- 14: >4hrs
-- 2: 23s
-
-### 2GB: > 20s (not include above)
-- 69: 48s
-
-### Query Optimization
-- 14: see log yx
+- 14: >4hrs - see /logs/query_log_yx.md
 
 ## Order issue
 - The order number correspondence documents is under /logs
