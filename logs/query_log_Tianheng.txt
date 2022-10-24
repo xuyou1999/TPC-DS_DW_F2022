@@ -1,3 +1,7 @@
+48
+Line 43: Add a ")", Add an Alias "tt1"
+Line 125: Delete ")" (There used to be two ")" upside the "order by")
+
 67
 Line 9: Replace (cast('1998-06-06' as date) +  60 days) with (dateadd(day, 60, cast('1998-06-06' as date)))
 
