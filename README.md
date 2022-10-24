@@ -120,6 +120,7 @@ Marie:
 ## Runtime limitations
 - The test run is on ARM64 MacOS machine. Thus, it is based on Microsoft's Azura SQL Edge docker container developer version, which limit the CPU performance to maximun 4 cores.
 - When running query 23, only 1 CPU core is allocated . Reason unknow. This only happens under the environment condition specified above. We believe this issue if irrelevant to our project but due to the lack of ARM64 support from Microsoft.
+- For query 35, the runtime is 300 times different between a native Windows system and Azura SQL Edge docker container developer version on ARM64 MacOS. Reason unknow, but very likely due to performance limitation on the environment.
 
 ## Results
 In /result folder for scale factors 1, 2, 5, 10
