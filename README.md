@@ -80,7 +80,7 @@ You Xu:
 - 47 done
 
 Arina:
-- 48
+- 48 done
 - 53 done
 - 57 done
 - 62 done
@@ -115,11 +115,13 @@ Marie:
 ## Order issue
 - The order number correspondence documents is under /logs
 - Correct ordered queries in /query_sqlserver_org_order
-- All already renamed and moved except 48
+- All already renamed and moved
 
 ## Runtime limitations
 - The test run is on ARM64 MacOS machine. Thus, it is based on Microsoft's Azura SQL Edge docker container developer version, which limit the CPU performance to maximun 4 cores.
 - When running query 23, only 1 CPU core is allocated . Reason unknow. This only happens under the environment condition specified above. We believe this issue if irrelevant to our project but due to the lack of ARM64 support from Microsoft.
+- For query 10 and 35, the runtime is 300 times different between a native Windows system and Azura SQL Edge docker container developer version on ARM64 MacOS. Reason unknow, but very likely due to performance limitation on the environment.
+- Memory usage issue: for unknown reason, the memory usage in Azura SQL Edge docker container is capped at 2.5GB, which might be the reason of why it is running much slower than Windows machine.
 
 ## Results
 In /result folder for scale factors 1, 2, 5, 10
