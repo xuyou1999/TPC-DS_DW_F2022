@@ -40,7 +40,7 @@ select top 100 channel, item, return_ratio, return_rank, currency_rank from
  web.return_rank <= 10
  or
  web.currency_rank <= 10
- )
+ ) ) tt1
  union
  select 
  'catalog' as channel
@@ -121,7 +121,6 @@ select top 100 channel, item, return_ratio, return_rank, currency_rank from
  store.return_rank <= 10
  or 
  store.currency_rank <= 10
- )
  )
  order by 1,4,5,2
  ;
