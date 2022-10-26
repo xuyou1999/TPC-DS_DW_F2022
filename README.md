@@ -11,6 +11,11 @@
     ```
     make OS=MACOS
     ```
+- For Linux users: run
+    ```
+    make OS=LINUX
+    ```
+- Currently, this project has no support for Windows users
 
 ### Generate Data
 Run the following script in /DSGen-software-code-3.2.0rc1/tools
@@ -27,7 +32,7 @@ Run the following three sql files located in /DSGen-software-code-3.2.0rc1/tools
 - tpcds_source.sql
 
 ### Load data
-- Run /src/load_data.py
+- Run /src/load_data.py, pay attention to your system path and make corresponding modifications
 - Copy the printed out result into load_data.sql
 - Run load_data.sql
 
@@ -42,7 +47,8 @@ Run the following script in /DSGen-software-code-3.2.0rc1/tools
 - Alternatively, all 99 queries are separately stored in /query_sqlserver_org_order already
 
 ### Run Queries
-- /src/auto_run_sql.ipynb will help connecting, running 99 queries and documenting the runtime automatically. 
+- /src/auto_run_sql.ipynb will help connecting, running 99 queries and documenting the runtime automatically
+- Microsoft OBDC version 18 installation is required 
 - Add database credentials in file "/src/credential.json" in the following format:
 ```
 {
@@ -52,6 +58,10 @@ Run the following script in /DSGen-software-code-3.2.0rc1/tools
     "password": "yourPassword"
 }
 ```
+- File /src/calculate_avg.ipynb can help calculating the average runtime for each query
+
+## Results
+In /result2 folder for scale factors 1, 2, 5, 10 and the overall average
 
 ## Work Plan
 ### Queries to be fixed
@@ -106,22 +116,15 @@ Marie:
 - 98 done
 
 ### Query Optimization
-#### 1GB
-- 10: 500s
-- 35: 1060s
-- 23: 85s
-- 14: >4hrs - see /logs/query_log_yx.md
+- 14: see /logs/query_log_yx.md
 
 ## Order issue
 - The order number correspondence documents is under /logs
 - Correct ordered queries in /query_sqlserver_org_order
 - All already renamed and moved
 
-## Runtime limitations
+## Runtime limitations (First Attempt)
 - The test run is on ARM64 MacOS machine. Thus, it is based on Microsoft's Azura SQL Edge docker container developer version, which limit the CPU performance to maximun 4 cores.
 - When running query 23, only 1 CPU core is allocated . Reason unknow. This only happens under the environment condition specified above. We believe this issue if irrelevant to our project but due to the lack of ARM64 support from Microsoft.
 - For query 10 and 35, the runtime is 300 times different between a native Windows system and Azura SQL Edge docker container developer version on ARM64 MacOS. Reason unknow, but very likely due to performance limitation on the environment.
 - Memory usage issue: for unknown reason, the memory usage in Azura SQL Edge docker container is capped at 2.5GB, which might be the reason of why it is running much slower than Windows machine.
-
-## Results
-In /result folder for scale factors 1, 2, 5, 10
