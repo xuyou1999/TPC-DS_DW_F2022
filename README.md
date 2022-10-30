@@ -59,9 +59,11 @@ Run the following script in /DSGen-software-code-3.2.0rc1/tools
 }
 ```
 - File /src/calculate_avg.ipynb can help calculating the average runtime for each query
+- File TPC-DS-Result_Visualization.ipynb can help generating some graphs based on the results for visualization purpose
 
 ## Results
 In /result2 folder for scale factors 1, 2, 5, 10 and the overall average
+All graphs are in folder Result_plot
 
 ## Work Plan
 ### Queries to be fixed
